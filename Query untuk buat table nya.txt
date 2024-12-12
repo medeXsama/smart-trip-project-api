@@ -1,0 +1,14 @@
+Query untuk buat table nya:
+
+CREATE TABLE `smart-trip-project.users_dataset.users` (
+    id STRING NOT NULL, -- ID unik pengguna
+    username STRING NOT NULL, -- Username
+    name STRING NOT NULL, -- Nama pengguna
+    email STRING NOT NULL, -- Email pengguna
+    password STRING NOT NULL, -- Password (hashed)
+    preference STRING NOT NULL, -- Preferensi pengguna (indoor/outdoor)
+    keywords ARRAY<STRING>, -- Kata kunci (multi-select: dingin, ramai, sepi | tambahin sisa nya)
+    types ARRAY<STRING>, -- Tipe tempat sesuai preferensi
+    registered_at TIMESTAMP NOT NULL, -- Waktu registrasi
+    last_login_at TIMESTAMP -- Waktu login terakhir (bisa null)
+);
